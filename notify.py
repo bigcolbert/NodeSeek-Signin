@@ -578,8 +578,8 @@ def telegram_bot(title: str, content: str) -> None:
         )
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
     payload = {
-        "chat_id": str(push_config.get("TG_USER_ID")),
-        "message_thread_id": str(push_config.get("TG_CHAT_ID")),
+        "chat_id": str(push_config.get("TG_CHAT_ID")),
+        "message_thread_id": str(push_config.get("TG_THREAD_ID")),
         "text": f"{title}\n\n{content}",
         "disable_web_page_preview": "true",
     }
